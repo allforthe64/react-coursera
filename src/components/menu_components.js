@@ -11,7 +11,7 @@ class Menu extends Component {
                 {
                     id: 0,
                     name:'Uthappizza',
-                    image: 'assets/images/uthappizza.png',
+                    image: '/Users/willi/Desktop/will/react/confusion/src/components/assets/images/uthappizza.png',
                     category: 'mains',
                     label:'Hot',
                     price:'4.99',
@@ -20,7 +20,7 @@ class Menu extends Component {
                 {
                     id: 1,
                     name:'Zucchipakoda',
-                    image: 'assets/images/zucchipakoda.png',
+                    image: './assets/images/zucchipakoda.png',
                     category: 'appetizer',
                     label:'',
                     price:'1.99',
@@ -29,7 +29,7 @@ class Menu extends Component {
                 {
                     id: 2,
                     name:'Vadonut',
-                    image: 'assets/images/vadonut.png',
+                    image: './assets/images/vadonut.png',
                     category: 'appetizer',
                     label:'New',
                     price:'1.99',
@@ -38,7 +38,7 @@ class Menu extends Component {
                 {
                     id: 3,
                     name:'ElaiCheese Cake',
-                    image: 'assets/images/elaicheesecake.png',
+                    image: './assets/images/elaicheesecake.png',
                     category: 'dessert',
                     label:'',
                     price:'2.99',
@@ -58,7 +58,7 @@ class Menu extends Component {
                             <Media object src={dish.image} alt={dish.name}/>
                         </Media>
                         <Media body className='ml-5'>
-                            <Media heading>{dish.name}</Media>
+                            <Media heading='true'>{dish.name}</Media>
                             <p>{dish.description}</p>
                         </Media>
                     </Media>
