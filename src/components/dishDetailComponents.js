@@ -17,10 +17,11 @@ class DishDetail extends Component {
             return (
                 <div key={dish.id} className="row">
                     <div className="col-12 col-md-5 m-1">
-                        <Card>
+                        <Card key={dish.id}
+                        onClick={() => this.props.onClick(dish.id)}>
                             <CardImg width="100%" src={dish.image} alt={dish.name} />
                             <CardBody>
-                                <CardTitle>{dish.name}</CardTitle>
+                                <h3>{dish.name}</h3>
                                 <CardText>{dish.description}</CardText>
                             </CardBody>
                         </Card>
@@ -44,10 +45,12 @@ class DishDetail extends Component {
         const showComments = comments.map((cmnt) => {
             return(
                 <div className="container">
-                    <li key={cmnt.id}>
-                        <p>{cmnt.comment}</p>
-                        <p>--{cmnt.author}+{cmnt.date}</p>
-                    </li>
+                    <ul>
+                        <li key={cmnt.id}>
+                            <p>{cmnt.comment}</p>
+                            <p>{cmnt.author}, {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(cmnt.date)))}</p>
+                        </li>
+                    </ul>
                 </div>
                 
             )

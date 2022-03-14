@@ -6,30 +6,17 @@ import { DISHES } from './dishes';
 import { render } from '@testing-library/react';
 import { Component } from 'react';
 
+import Main from './components/MainComponent';
+
 class App extends Component {
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      dishes: DISHES
-    };
-  };
 
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <Navbar dark color="primary">
-            <div className="container">
-              <NavbarBrand id="brand" href="/">Ristorante Con Fusion</NavbarBrand>
-            </div>
-          </Navbar>
-        </header>
-        <Menu dishes = {this.state.dishes} />
+        <Main />
       </div>
     );
-  };
-};
+  }
+}
 
 export default App;
